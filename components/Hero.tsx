@@ -44,6 +44,8 @@ export default function Hero() {
     <header className="relative min-h-screen flex items-center overflow-hidden bg-deepViolet">
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#1a0b2e] via-[#2E1065] to-[#4c1d95] z-0"></div>
+      {/* Additional depth gradient */}
+      <div className="absolute inset-0 bg-gradient-to-t from-deepViolet/50 via-transparent to-transparent z-0"></div>
 
       {/* Animated Background Orbs */}
       <div className="blur-orb w-[600px] h-[600px] bg-electricPurple/30 top-[-200px] left-[-200px] animate-pulse z-0"></div>
@@ -88,7 +90,7 @@ export default function Hero() {
           <div className="relative w-[550px] h-[550px] animate-[spin_80s_linear_infinite]">
             {/* Card 1 */}
             <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-16 animate-[spin_80s_linear_infinite_reverse]">
-              <div className="glass-card p-3 rounded-2xl w-52 hover:scale-105 transition-transform duration-500 shadow-2xl cursor-pointer group">
+              <div className="bg-white/8 backdrop-blur-xl border border-white/15 p-3 rounded-2xl w-52 hover:scale-105 transition-transform duration-500 shadow-[0_8px_24px_rgba(0,0,0,0.3)] cursor-pointer group">
                 <Image
                   src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400&q=80"
                   alt="NFT"
@@ -97,14 +99,14 @@ export default function Hero() {
                   className="w-full h-44 object-cover rounded-xl mb-3 group-hover:brightness-110 transition-all"
                 />
                 <div className="flex justify-between items-center px-1">
-                  <span className="text-xs font-semibold text-white/80">@neon_dream</span>
-                  <span className="text-xs font-bold text-electricPurple">1.5 ETH</span>
+                  <span className="text-xs font-semibold text-white/90">@neon_dream</span>
+                  <span className="text-xs font-bold text-electricPurple drop-shadow-sm">1.5 ETH</span>
                 </div>
               </div>
             </div>
             {/* Card 2 */}
             <div className="absolute bottom-12 right-0 transform animate-[spin_80s_linear_infinite_reverse]">
-              <div className="glass-card p-3 rounded-2xl w-48 hover:scale-105 transition-transform duration-500 shadow-2xl cursor-pointer group">
+              <div className="bg-white/8 backdrop-blur-xl border border-white/15 p-3 rounded-2xl w-48 hover:scale-105 transition-transform duration-500 shadow-[0_8px_24px_rgba(0,0,0,0.3)] cursor-pointer group">
                 <Image
                   src="https://images.unsplash.com/photo-1634152962476-4b8a00e1915c?auto=format&fit=crop&w=400&q=80"
                   alt="NFT"
@@ -113,14 +115,14 @@ export default function Hero() {
                   className="w-full h-36 object-cover rounded-xl mb-3 group-hover:brightness-110 transition-all"
                 />
                 <div className="flex justify-between items-center px-1">
-                  <span className="text-xs font-semibold text-white/80">@cyber_punk</span>
-                  <span className="text-xs font-bold text-electricPurple">2.1 ETH</span>
+                  <span className="text-xs font-semibold text-white/90">@cyber_punk</span>
+                  <span className="text-xs font-bold text-electricPurple drop-shadow-sm">2.1 ETH</span>
                 </div>
               </div>
             </div>
             {/* Card 3 */}
             <div className="absolute bottom-12 left-0 transform animate-[spin_80s_linear_infinite_reverse]">
-              <div className="glass-card p-3 rounded-2xl w-50 hover:scale-105 transition-transform duration-500 shadow-2xl cursor-pointer group">
+              <div className="bg-white/8 backdrop-blur-xl border border-white/15 p-3 rounded-2xl w-50 hover:scale-105 transition-transform duration-500 shadow-[0_8px_24px_rgba(0,0,0,0.3)] cursor-pointer group">
                 <Image
                   src="https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=400&q=80"
                   alt="NFT"
@@ -129,8 +131,8 @@ export default function Hero() {
                   className="w-full h-40 object-cover rounded-xl mb-3 group-hover:brightness-110 transition-all"
                 />
                 <div className="flex justify-between items-center px-1">
-                  <span className="text-xs font-semibold text-white/80">@future_bass</span>
-                  <span className="text-xs font-bold text-electricPurple">0.9 ETH</span>
+                  <span className="text-xs font-semibold text-white/90">@future_bass</span>
+                  <span className="text-xs font-bold text-electricPurple drop-shadow-sm">0.9 ETH</span>
                 </div>
               </div>
             </div>
@@ -143,8 +145,11 @@ export default function Hero() {
           >
             <div
               ref={cardRef}
-              className="glass-card bg-white/5 p-4 rounded-[2rem] w-80 shadow-[0_0_60px_rgba(139,92,246,0.3)] backdrop-blur-2xl card-3d cursor-pointer group"
+              className="relative bg-gradient-to-br from-white/10 via-white/8 to-white/5 backdrop-blur-2xl border border-white/20 p-5 rounded-3xl w-80 shadow-[0_8px_32px_rgba(0,0,0,0.3),0_0_80px_rgba(139,92,246,0.2)] card-3d cursor-pointer group overflow-hidden"
             >
+              {/* Subtle inner glow */}
+              <div className="absolute inset-0 bg-gradient-to-br from-electricPurple/10 via-transparent to-pink-500/5 pointer-events-none"></div>
+              
               <div className="relative overflow-hidden rounded-2xl mb-5">
                 <Image
                   src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=format&fit=crop&w=600&q=80"
@@ -153,28 +158,34 @@ export default function Hero() {
                   height={320}
                   className="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute top-4 right-4 bg-black/40 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-bold text-white flex items-center gap-1.5">
-                  <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span> Live Auction
+                <div className="absolute top-4 right-4 bg-gradient-to-r from-red-500/90 to-red-600/90 backdrop-blur-md px-4 py-2 rounded-full text-xs font-bold text-white flex items-center gap-1.5 shadow-lg border border-white/20">
+                  <span className="w-2 h-2 bg-white rounded-full animate-pulse shadow-[0_0_8px_rgba(255,255,255,0.8)]"></span> Live Auction
                 </div>
               </div>
-              <div className="px-2">
-                <h3 className="text-white font-display font-bold text-2xl mb-2">Ethereal Glitch #04</h3>
-                <div className="flex justify-between items-end">
-                  <div className="flex items-center gap-2">
-                    <Image
-                      src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix"
-                      alt="Creator"
-                      width={32}
-                      height={32}
-                      className="w-8 h-8 rounded-full bg-white/10 p-0.5"
-                    />
-                    <span className="text-sm font-medium text-purple-100/80">@digital_dreamer</span>
+              <div className="relative px-2 pb-1">
+                <h3 className="text-white font-display font-bold text-2xl mb-4 drop-shadow-lg">Ethereal Glitch #04</h3>
+                <div className="flex justify-between items-end gap-4">
+                  <div className="flex items-center gap-2.5 min-w-0 flex-1">
+                    <div className="relative flex-shrink-0">
+                      <div className="absolute inset-0 bg-gradient-to-br from-electricPurple to-pink-400 rounded-full blur-sm opacity-50"></div>
+                      <Image
+                        src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix"
+                        alt="Creator"
+                        width={36}
+                        height={36}
+                        className="relative w-9 h-9 rounded-full bg-white/20 p-0.5 border border-white/30"
+                      />
+                    </div>
+                    <span className="text-sm font-medium text-purple-100 truncate">@digital_dreamer</span>
                   </div>
-                  <div className="text-right">
-                    <p className="text-[10px] text-purple-200 uppercase tracking-widest font-bold mb-1">
+                  <div className="text-right flex-shrink-0">
+                    <p className="text-[11px] text-purple-200/90 uppercase tracking-wider font-semibold mb-1.5">
                       Current Bid
                     </p>
-                    <p className="text-2xl font-display font-bold text-white">4.2 ETH</p>
+                    <div className="flex items-baseline gap-1.5">
+                      <p className="text-2xl font-display font-bold text-white drop-shadow-md">4.2</p>
+                      <span className="text-sm font-semibold text-purple-200/80">ETH</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -184,7 +195,7 @@ export default function Hero() {
       </div>
 
       {/* Subtle Gradient Fade into content */}
-      <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-surface to-transparent z-10 pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-surface via-surface/80 to-transparent z-10 pointer-events-none"></div>
     </header>
   );
 }
