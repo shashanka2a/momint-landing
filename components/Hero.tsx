@@ -54,7 +54,7 @@ export default function Hero() {
       <div className="container mx-auto px-6 relative z-10 pt-32 pb-20 grid lg:grid-cols-2 gap-16 items-center">
         {/* Hero Text */}
         <div className="text-center lg:text-left">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-md mb-8 animate-float">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 mb-8 animate-float">
             <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse shadow-[0_0_10px_rgba(74,222,128,0.5)]"></span>
             <span className="text-sm font-semibold text-white/90 tracking-wide uppercase">
               Genesis Drop Live
@@ -74,7 +74,7 @@ export default function Hero() {
             <button className="btn-interactive bg-white text-deepViolet px-8 py-4 rounded-full font-bold text-lg shadow-xl shadow-white/10">
               Start Collecting
             </button>
-            <button className="btn-interactive flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white/5 text-white font-semibold hover:bg-white/10 backdrop-blur-sm group">
+            <button className="btn-interactive flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white/5 text-white font-semibold hover:bg-white/10 group">
               <PlayCircle className="w-5 h-5 group-hover:scale-110 transition-transform" />
               Watch Manifesto
             </button>
@@ -84,7 +84,7 @@ export default function Hero() {
         {/* Hero Visual (Orbiting Cards) */}
         <div className="relative h-[600px] hidden lg:flex items-center justify-center perspective-1000">
           {/* Center Glow */}
-          <div className="absolute w-80 h-80 bg-electricPurple/30 rounded-full blur-[120px] animate-pulse"></div>
+          <div className="absolute w-80 h-80 bg-electricPurple/20 rounded-full animate-pulse"></div>
 
           {/* Orbit Container */}
           <div className="relative w-[550px] h-[550px] animate-[spin_80s_linear_infinite]">

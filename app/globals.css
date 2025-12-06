@@ -66,11 +66,10 @@
     transform-style: preserve-3d;
   }
   
-  /* Blur Orbs */
+  /* Background Orbs */
   .blur-orb {
     position: absolute;
     border-radius: 50%;
-    filter: blur(100px);
     z-index: 0;
   }
 
