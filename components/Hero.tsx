@@ -90,7 +90,7 @@ export default function Hero() {
           <div className="relative w-[550px] h-[550px] animate-[spin_80s_linear_infinite]">
             {/* Card 1 */}
             <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-16 animate-[spin_80s_linear_infinite_reverse]">
-              <div className="bg-white/8 backdrop-blur-xl border border-white/15 p-3 rounded-2xl w-52 hover:scale-105 transition-transform duration-500 shadow-[0_8px_24px_rgba(0,0,0,0.3)] cursor-pointer group">
+              <div className="bg-gradient-to-br from-deepViolet/35 via-[#3d1a7a]/30 to-[#5a2a9a]/25 border border-white/10 p-3 rounded-2xl w-52 hover:scale-105 transition-transform duration-500 shadow-[0_8px_24px_rgba(0,0,0,0.25)] cursor-pointer group">
                 <Image
                   src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400&q=80"
                   alt="NFT"
@@ -106,7 +106,7 @@ export default function Hero() {
             </div>
             {/* Card 2 */}
             <div className="absolute bottom-12 right-0 transform animate-[spin_80s_linear_infinite_reverse]">
-              <div className="bg-white/8 backdrop-blur-xl border border-white/15 p-3 rounded-2xl w-48 hover:scale-105 transition-transform duration-500 shadow-[0_8px_24px_rgba(0,0,0,0.3)] cursor-pointer group">
+              <div className="bg-gradient-to-br from-deepViolet/35 via-[#3d1a7a]/30 to-[#5a2a9a]/25 border border-white/10 p-3 rounded-2xl w-48 hover:scale-105 transition-transform duration-500 shadow-[0_8px_24px_rgba(0,0,0,0.25)] cursor-pointer group">
                 <Image
                   src="https://images.unsplash.com/photo-1634152962476-4b8a00e1915c?auto=format&fit=crop&w=400&q=80"
                   alt="NFT"
@@ -122,7 +122,7 @@ export default function Hero() {
             </div>
             {/* Card 3 */}
             <div className="absolute bottom-12 left-0 transform animate-[spin_80s_linear_infinite_reverse]">
-              <div className="bg-white/8 backdrop-blur-xl border border-white/15 p-3 rounded-2xl w-50 hover:scale-105 transition-transform duration-500 shadow-[0_8px_24px_rgba(0,0,0,0.3)] cursor-pointer group">
+              <div className="bg-gradient-to-br from-deepViolet/35 via-[#3d1a7a]/30 to-[#5a2a9a]/25 border border-white/10 p-3 rounded-2xl w-50 hover:scale-105 transition-transform duration-500 shadow-[0_8px_24px_rgba(0,0,0,0.25)] cursor-pointer group">
                 <Image
                   src="https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=400&q=80"
                   alt="NFT"
@@ -145,10 +145,10 @@ export default function Hero() {
           >
             <div
               ref={cardRef}
-              className="relative bg-gradient-to-br from-white/10 via-white/8 to-white/5 backdrop-blur-2xl border border-white/20 p-5 rounded-3xl w-80 shadow-[0_8px_32px_rgba(0,0,0,0.3),0_0_80px_rgba(139,92,246,0.2)] card-3d cursor-pointer group overflow-hidden"
+              className="relative bg-gradient-to-br from-deepViolet/40 via-[#3d1a7a]/35 to-[#5a2a9a]/30 border border-white/10 p-5 rounded-3xl w-80 shadow-[0_8px_32px_rgba(0,0,0,0.2),0_0_60px_rgba(139,92,246,0.15)] card-3d cursor-pointer group overflow-hidden"
             >
-              {/* Subtle inner glow */}
-              <div className="absolute inset-0 bg-gradient-to-br from-electricPurple/10 via-transparent to-pink-500/5 pointer-events-none"></div>
+              {/* Subtle inner glow that matches background */}
+              <div className="absolute inset-0 bg-gradient-to-br from-electricPurple/15 via-transparent to-pink-500/10 pointer-events-none"></div>
               
               <div className="relative overflow-hidden rounded-2xl mb-5">
                 <Image
@@ -158,7 +158,7 @@ export default function Hero() {
                   height={320}
                   className="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute top-4 right-4 bg-gradient-to-r from-red-500/90 to-red-600/90 backdrop-blur-md px-4 py-2 rounded-full text-xs font-bold text-white flex items-center gap-1.5 shadow-lg border border-white/20">
+                <div className="absolute top-4 right-4 bg-gradient-to-r from-red-500/85 to-red-600/85 px-4 py-2 rounded-full text-xs font-bold text-white flex items-center gap-1.5 shadow-lg border border-white/20">
                   <span className="w-2 h-2 bg-white rounded-full animate-pulse shadow-[0_0_8px_rgba(255,255,255,0.8)]"></span> Live Auction
                 </div>
               </div>
@@ -167,7 +167,7 @@ export default function Hero() {
                 <div className="flex justify-between items-end gap-4">
                   <div className="flex items-center gap-2.5 min-w-0 flex-1">
                     <div className="relative flex-shrink-0">
-                      <div className="absolute inset-0 bg-gradient-to-br from-electricPurple to-pink-400 rounded-full blur-sm opacity-50"></div>
+                      <div className="absolute inset-0 bg-gradient-to-br from-electricPurple/40 to-pink-400/40 rounded-full opacity-60"></div>
                       <Image
                         src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix"
                         alt="Creator"
